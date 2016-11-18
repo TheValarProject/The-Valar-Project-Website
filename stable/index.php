@@ -269,7 +269,7 @@ $(document).ready(function() {
   </div>
   <h1>Welcome!</h1>
   <p>Welcome to the Valar Project. The Valar project is a project that will replicate the world of Middle Earth (The Lord of the Rings world) into Minecraft.</p>
-  <p>TVP (The Valar Project) is a project that encompasses both a Minecraft server and a Minecraft mod. Our server has one of the largest scales of all LotR servers and also benefits from closely working with the Awaken Dreams mod to help build a world that is truly reflective of Tolkien's great works. The Valar Project server will allow you to join and participate in many different events such as parties, large scale battles and large scale builds. The Awaken Dreams mod is part the of The Valar Project, and it aims to enhance people's experiences on our server and to bring those same experiences back to their single-player world.</p>
+  <p>TVP (The Valar Project) is a project that encompasses both a Minecraft server and a Minecraft mod. Our server has one of the largest scales of all LotR servers and also benefits from closely working with the Awaken Dreams mod to help build a world that is truly reflective of Tolkien's great works. The Valar Project server will allow you to join and participate in many different events such as parties, large scale battles and massive builds. The Awaken Dreams mod is part the of The Valar Project, and it aims to enhance people's experiences on our server and to bring those same experiences back to their single-player world.</p>
   <p>One of TVP's primary goals is to allow you to play roleplay on our server and on single player. With the help of the mod we are able to include famous LotR NPCs and a new quest system. With RP you will be able to choose a race and a faction based on your rank. This will open up different opportunities such as which job you will do.</p>
   <p>The Valar Project will not only be the biggest scale Lord of the Rings map but will also be the most detailed. As well as including the Main Building and areas that are included in the war of the ring, we will be recreating middle earth so that means: Villages, Hideouts, Tombs etc. will all be built. All the locations will be based on the real works of J.R.R. Tolkien. Some of the villages and areas were left unnamed by J.R.R Tolkien so we will be naming these places based on their culture, inhabitants and style.</p>
   <h1>Why should you Join The Valar Project?</h1>
@@ -278,18 +278,18 @@ $(document).ready(function() {
   <ul>
    <li>Explore Middle Earth</li>
    <li>Help create Middle Earth</li>
-   <li>Take part of an event! (like the siege of Helm's Deep or the Battle of Pelennor Fields)</li>
+   <li>Take part in an event! (like the siege of Helm's Deep or build competitions)</li>
    <li>Get promoted through hard work and receive new privileges</li>
-   <li>Play Some Lord of the rings in-game</li>
+   <li>Follow in the footsteps of the Fellowship of the Rings in-game</li>
    <li>Help naming some of the unnamed villages, locations etc.</li>
-   <li>Find our Easter eggs all around in Middle Earth (like the ruins of Nogrod etc.)</li>
-   <li>Get to Know the other members of The Valar Project</li>
+   <li>Find our easter eggs all around in Middle Earth (like the ruins of Nogrod etc.)</li>
+   <li>Get to know the other members of The Valar Project</li>
    <li>Let your imagination run wild with LotR based builds in our expansive free build area</li>
   </ul>
   <h1>Getting Started</h1>
   <p>Hopefully by now you've decided that you want be a part of this great experience. To get started, just install the Awaken Dreams mod and come on our server. Our server's address is:</p>
   <h3>server.tvp.elementfx.com</h3>
-  <p>Just come online and introduce yourself. Any of our staff would be glad to give you a tour of our progress so far.</p>
+  <p>Just come online and introduce yourself. Any of our staff would be glad to give you a tour of our progress so far and help you throughout your journey.</p>
   <?php bodyEnd(); ?>
  </body>
 </html>
