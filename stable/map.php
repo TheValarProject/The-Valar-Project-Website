@@ -15,7 +15,7 @@ include('pageContent.php');
  </head>
  <body>
   <?php bodyStart(); ?>
-  <iframe src="http://<?php echo gethostbyname('tvp.squarechair.net') == $_SERVER['REMOTE_ADDR'] ? 'localhost' : "tvp.squarechair.net"; ?>:8123" id="map"></iframe>
+  <iframe src="http://<?php echo gethostbyname('server.tvp.elementfx.com') == $_SERVER['REMOTE_ADDR'] ? 'localhost' : "server.tvp.elementfx.com"; ?>:8123" id="map"></iframe>
   <?php bodyEnd(); ?>
  </body>
 </html>

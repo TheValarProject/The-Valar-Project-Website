@@ -265,7 +265,7 @@ $(document).ready(function() {
    <img src="resources/images/screenshots/thumbnail/fornost_night.png" index="3" />
   </div>
   <div style="text-align: center;">
-   <h3>Server IP: tvp.squarechair.net</h3>
+   <h3>Server IP: server.tvp.elementfx.com</h3>
   </div>
   <h1>Welcome!</h1>
   <p>Welcome to the Valar Project. The Valar project is a project that will replicate the world of Middle Earth (The Lord of the Rings world) into Minecraft.</p>
@@ -288,7 +288,7 @@ $(document).ready(function() {
   </ul>
   <h1>Getting Started</h1>
   <p>Hopefully by now you've decided that you want be a part of this great experience. To get started, just install the Awaken Dreams mod and come on our server. Our server's address is:</p>
-  <h3>tvp.squarechair.net</h3>
+  <h3>server.tvp.elementfx.com</h3>
   <p>Just come online and introduce yourself. Any of our staff would be glad to give you a tour of our progress so far.</p>
   <?php bodyEnd(); ?>
  </body>
