@@ -18,6 +18,7 @@ li {
   <p>Our server has a long way to go before we reach a 'completed' state. At the moment we are working on finishing interiors in Aldburg. We also have the following places marked out and in some cases partially finished, but all require at least some additonal work:</p>
   <ul>
     <li>Brokenborings (started)</li>
+    <li>Bucklebury (almost finished)</li>
     <li>Cameth Brin</li>
     <li>Crickhollow (almost finished)</li>
     <li>Deephallow</li>
