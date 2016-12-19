@@ -63,13 +63,13 @@ LoginSystem._getStoredItem = function(item) {
 			return false;
 		}
 	};
-	
+
 	if(isSessionStorageSupported()) {
 		return sessionStorage.getItem(item);
 	}
 	else {
 		// Output warning about insecurity
-		
+
 		// TODO Fallback to cookies
 	}
 };
@@ -88,13 +88,13 @@ LoginSystem._setStoredItem = function(item, value) {
 			return false;
 		}
 	};
-	
+
 	if(isSessionStorageSupported()) {
 		return sessionStorage.setItem(item, value);
 	}
 	else {
 		// Output warning about insecurity
-		
+
 		// TODO Fallback to cookies
 	}
 };
@@ -132,9 +132,9 @@ LoginSystem._loginRound = function() {
 		this.hash = shaObj.getHMAC("BYTES");
 	}
 	this._loginRound += 32;
-	
+
 	this.loginProgressBar.val(this.loginProgressBar.val() + 1);
-	
+
 	setTimeout(this._loginRound, 0);
 };
 
@@ -144,18 +144,18 @@ LoginSystem._loginFinish = function() {
 	shaObj.setHMACKey(this.message, "TEXT");
 	shaObj.update(this.hash);
 	this.hash = shaObj.getHMAC("HEX");
-	
+
 	// Generate the hmac for the nonce
 	shaObj = new jsSHA("SHA-512", "BYTES");
 	shaObj.setHMACKey(this.hash, "TEXT");
 	shaObj.update(this.getNonce() + 0);
 	var finalHash = shaObj.getHMAC("HEX");
-	
+
 	// TODO post request
 	$.post("TODO all this stuff", function() {
 		// TODO Callback stuff
 	});
-	
+
 	// Mark login process as finished
 	this._loginRound = 0;
 }
@@ -163,7 +163,7 @@ LoginSystem._loginFinish = function() {
 LoginSystem.login = function(username, password, progressBarElement) {
 	// Make sure a login isn't already in progress
 	if(this._loginRound != 0) return;
-	
+
 	// Begin generating subHash
 	this.message = username + this.realm + password;
 	var shaObj = new jsSHA("SHA-512", "TEXT");
@@ -175,7 +175,7 @@ LoginSystem.login = function(username, password, progressBarElement) {
 
 LoginSystem.updateLoginCookie = function() {
 	if(!this.message) return;
-	
+
 	// Generate the hmac
 	var shaObj = new jsSHA("SHA-512", "BYTES");
 	shaObj.setHMACKey(this.getSubHash(), "TEXT");
@@ -188,13 +188,35 @@ LoginSystem.updateLoginCookie = function() {
 LoginSystem.logout = function() {
 	// Make sure a login isn't already in progress
 	if(this._loginRound != 0) return;
-	
+
 	this.updateLoginCookie();
 	// TODO post request
-	
+
 	this.message = null;
 };
 
+// Check the minecraft server status
+function checkServerStatus() {
+	$.get("/resources/serverside_scripts/query_server.php").done(function(data) {
+		if(data === "true") {
+			// Update status
+			$("#serverStatus").html("Server is online");
+			// Schedule another check in 1 hour
+			window.setTimeout(checkServerStatus, 60 * 60 * 1000);
+		}
+		else {
+			// Update status
+			$("#serverStatus").html("Server may currently be experiencing issues");
+			// Schedule another check in 5 minutes
+			window.setTimeout(checkServerStatus, 5 * 60 * 1000);
+		}
+	}).fail(function() {
+		// Update status
+		$("#serverStatus").html("Server status cannot be determined");
+		// Schedule another check in 5 minutes
+		window.setTimeout(checkServerStatus, 5 * 60 * 1000);
+	});
+}
 
 
 $(document).ready(function() {
@@ -208,6 +230,8 @@ $(document).ready(function() {
 			$(this).wrap("<div class=\"text-wrapper\"></div>");
 		}
 	});
+	// Start checking server status
+	checkServerStatus();
 	//$("#pageContents").css("height", ($("#footerDivider").position().top - $("#pageContents").position().top - 7) + "px");
 	/*$("#mainNavBorderBottom").css("width", $("#mainNavigation").outerWidth() + "px");
 	submenu = $(".submenu");
