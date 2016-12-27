@@ -25,8 +25,9 @@ include('pageContent.php');
   float: right;
 }
 
-.button-wrapper,.button-wrapper > input {
+.button-wrapper {
   border-top: none;
+  margin-top: -2px;
 }
   </style>
   <script type="text/javascript">
