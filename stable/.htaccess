@@ -1,14 +1,26 @@
 RewriteEngine on
 DirectoryIndex index.php index.html
 
-RewriteCond %{HTTP_HOST} ^dev\.tvp\.elementfx\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.dev\.tvp\.elementfx\.com$
-RewriteRule ^index\.html$ "http\:\/\/dev\.tvp\.elementfx\.com\/index\.php" [R=301,L]
+RewriteCond %{HTTP_HOST} ^tvp\.elementfx\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tvp\.elementfx\.com$
+RewriteRule ^index\.html$ "http\:\/\/tvp\.elementfx\.com\/index\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tvp\.elementfx\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tvp\.elementfx\.com$
+RewriteRule ^index\.htm$ "http\:\/\/tvp\.elementfx\.com\/index\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tvp\.x10host\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tvp\.x10host\.com$
+RewriteRule ^index\.html$ "http\:\/\/tvp\.x10host\.com\/index\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tvp\.x10host\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tvp\.x10host\.com$
+RewriteRule ^index\.htm$ "http\:\/\/tvp\.x10host\.com\/index\.php" [R=301,L]
 
 Options -Indexes
 
 Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
-RewriteCond %{HTTP_HOST} !^dev\.tvp\.elementfx\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^tvp\.elementfx\.com$ [NC]
 RewriteRule ^(.*)$ http://tvp.elementfx.com/$1 [R=301,L]
