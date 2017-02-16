@@ -217,7 +217,7 @@ $(document).ready(function() {
   else {
    $("#modalPopupLeft").removeClass("disabled");
   }
-  if(currentModalIndex >= $("#carousel > img").size() - 1) {
+  if(currentModalIndex >= $("#carousel > img").length - 1) {
    $("#modalPopupRight").addClass("disabled");
   }
   else {
